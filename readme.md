@@ -11,6 +11,4 @@ etc.
 Also to be considered :
 - Unread email
 - Latest news clusters on Google News ?
-- A nice, free music to discover
-
-This is for training, so we have no reason to make this in Python2, and will write it it Python 3.
+- A nice, proprietary-right-free music to discover
