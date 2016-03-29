@@ -12,9 +12,12 @@ def get_stock_history():
 
 def stock_display():
     history = get_stock_history()
+    message = ""
+    message = message + "\nIBM :\n"
     for i in history["results"]:
-        print i["timestamp"][0:9], "closing value :" i["close"]
-
-    print "******* DONE *******"
+        message = message + i["timestamp"][0:9] + " closing value : " + str(i["close"]) + "\n"
+    message = message + "-------------\n"
+    print message
+    return message
 
 stock_display()
