@@ -1,6 +1,7 @@
 import requests
 import json
 import datetime
+from parameters import access_params
 
 def get_forecast():
     # in the "parameters.json" file, the "location" must be entered as follows : "City, iso_3166_country_code"
@@ -16,15 +17,6 @@ def forecast_message():
     time = now.strftime("%H:%M")
     message = "The date is " + date + " and it is " + time + ". The temperature right now is " + str(get_forecast()[0]) + " degrees Celsius with a general weather \"" + get_forecast()[1] + "\" today ! Have fun !"
     return message
-
-def access_params(param):
-    try:
-        myplace = open('parameters.json', 'r')
-        myplace = myplace.read()
-        myplace = json.loads(myplace)
-    except FileNotFoundError as err:
-        print(err)
-    return myplace[param]
 
 def main():
     current_forecast = forecast_message()
