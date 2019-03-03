@@ -31,7 +31,7 @@ def forecast_message(forecast_json):
 def main():
     myforecast_json = get_forecast()
     message = forecast_message(myforecast_json)
-    print message
+    print(message)
     return message
 
 main()

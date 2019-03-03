@@ -36,4 +36,4 @@ def message_display():
         message = message + h
     return message
 
-print message_display()
+print(message_display())
